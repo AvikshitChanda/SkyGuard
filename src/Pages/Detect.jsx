@@ -60,7 +60,7 @@ const Detect = () => {
 
     const sendFrameToBackend = async (imageData) => {
         try {
-            const response = await axios.post('/process_frame', { frameData: imageData });
+            const response = await axios.post('https://sky-guard-backend.vercel.app/process_frame', { frameData: imageData });
             const detectedObjects = response.data.detected_objects;
             const droneDetected = detectedObjects.includes('Drone detected!');
             if (droneDetected) {
