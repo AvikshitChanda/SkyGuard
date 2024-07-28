@@ -10,9 +10,6 @@ Backend code :-[Backend code](https://github.com/AvikshitChanda/SkyGuardBackend)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
-- [File Structure](#file-structure)
-- [License](#license)
-- [Contributing](#contributing)
 
 ## Overview 🌟
 
