@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# SkyGuard 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SkyGuard is a web application that leverages deep learning to detect drones from video streams. It provides real-time alerts and detailed information about detected drones to ensure security.<br>
+Backend code :-[Backend code](https://github.com/AvikshitChanda/SkyGuardBackend)
 
-## Available Scripts
+## Table of Contents 📋
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [File Structure](#file-structure)
+- [License](#license)
+- [Contributing](#contributing)
 
-### `npm start`
+## Overview 🌟
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SkyGuard is designed to provide real-time monitoring and detection of unauthorized drone activities. It uses a pre-trained deep learning model to analyze video streams and identify the presence of drones, alerting users with visual and auditory notifications.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features ✨
 
-### `npm test`
+- 📹 Real-time video stream analysis
+- 🔍 Automatic drone detection
+- 🔔 Audio and visual alerts upon detection
+- 📜 Detailed messages of detected drones
+- 🌐 Responsive web interface
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation 🛠️
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- npm
+- Python 3.7+
+- TensorFlow
+- OpenCV
+- Pillow
+- NumPy
+- joblib
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+    ```bash
+    git clone https://github.com/yourusername/SkyGuard.git
+    cd SkyGuard
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install the required packages for the frontend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install the required packages for the backend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Learn More
+4. Download and place the models (`model2.h5` and `MobileNet_Transfer_Learning_ANN.joblib`) in the project directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage 🚀
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the React frontend:
 
-### Code Splitting
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Run the Streamlit backend:
 
-### Analyzing the Bundle Size
+    ```bash
+    streamlit run app.py
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Open your browser and navigate to `http://localhost:3000` for the frontend and `http://localhost:8501` for the backend.
 
-### Making a Progressive Web App
+## Technologies 🧪
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Frontend:** React, Streamlit
+- **Backend:** TensorFlow, OpenCV, NumPy, Pillow
+- **Models:** Pre-trained CNN model and an ANN model for drone detection
 
-### Advanced Configuration
+## File Structure 📁
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+SkyGuard/
+│
+├── public/                  # Public assets
+│   ├── index.html
+│   └── ...
+├── src/                     # React frontend source code
+│   ├── Assets/              # Assets like images and videos
+│   ├── Components/          # React components
+│   ├── Pages/               # React pages
+│   ├── App.js               # Main React component
+│   └── index.js             # Entry point for React
+├── backend/                 # Backend source code
+│   ├── app.py               # Main application script
+│   └── ...
+├── models/                  # Pre-trained models
+│   ├── model2.h5
+│   └── MobileNet_Transfer_Learning_ANN.joblib
+├── requirements.txt         # Python package dependencies
+├── package.json             # npm package dependencies
+├── README.md                # Readme file
+└── ...
