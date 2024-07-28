@@ -32,7 +32,7 @@ SkyGuard is designed to provide real-time monitoring and detection of unauthoriz
 
 - Node.js
 - npm
-- Python 3.7+
+- React Js
 - TensorFlow
 - OpenCV
 - Pillow
