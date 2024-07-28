@@ -34,6 +34,7 @@ SkyGuard is designed to provide real-time monitoring and detection of unauthoriz
 - OpenCV
 - NumPy
 - joblib
+- Flask
 
 ### Steps
 
@@ -52,7 +53,7 @@ SkyGuard is designed to provide real-time monitoring and detection of unauthoriz
 ## Technologies 🧪
 
 - **Frontend:** ReactJs
-- **Backend:** TensorFlow, OpenCV, NumPy
+- **Backend:** Flask,TensorFlow, OpenCV, NumPy
 - **Models:** Pre-trained CNN model and an ANN model for drone detection
 
 
