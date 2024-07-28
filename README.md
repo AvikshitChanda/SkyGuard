@@ -32,7 +32,6 @@ SkyGuard is designed to provide real-time monitoring and detection of unauthoriz
 - React Js
 - TensorFlow
 - OpenCV
-- Pillow
 - NumPy
 - joblib
 
